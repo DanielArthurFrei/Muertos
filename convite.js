@@ -13,3 +13,14 @@ function nextImage(){
     
         document.getElementById("radio"+count).checked = true;
 }
+
+function abrirModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'flex'; // Mostra o modal
+}
+
+// Função para fechar o modal
+function fecharModal() {
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none'; // Esconde o modal
+}

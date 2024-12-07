@@ -2,22 +2,43 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
     <title>Dia de Los Muertos</title>
     <link rel="stylesheet" href="convite.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <a href="https://danielarthurfrei.github.io/Muertos2/" class="logotipo"><img src="images/Logotipo.png" alt="Logotipo de Caveira decorada"></a> 
 
-        <h1><strong>¿Conoces el "Día de Los Muertos"?</strong></h1>
+        <div class="linkheader">
+            <a href="historia.html" class="logotipo"><img src="images/Logotipo.png" alt="Logotipo de Caveira decorada"></a> 
+        </div>
 
-        <a href="https://danielarthurfrei.github.io/Muertos2/" class="logotipo"><img src="images/Logotipo.png" alt="Logotipo de Caveira decorada"></a> 
+        <div class="Titulo">
+            <h1><strong>Día de Los Muertos</strong></h1>
+            <h2>Vamos a conocer?</h2>
+        </div>
+
+        <div class="linkheader">
+            <a href="historia.html" class="logotipo"><img src="images/Logotipo.png" alt="Logotipo de Caveira decorada"></a> 
+        </div>
         
     </header>
     <main>
         
-        <h2>¿Sabes el origen? ¿La celebración? ¿Curiosidades?</h2>
+        <div class="textoqrcode">
+            <h2>¿Sabes el origen? ¿La celebración? ¿Curiosidades?</h2>
+
+            <div class="qrcode">
+                <button class="botao" onclick="abrirModal()">Visualizar QR Code</button>
+                <div class="modal" id="modal">
+                    <button class="fechar" onclick="fecharModal()">×</button>
+                    <img src="images/qrcode.png" alt="QR Code da Página">
+                 </div>
+            </div>
+        </div>
 
         <section>
         
@@ -45,13 +66,14 @@
                 <div class="slide">
                     <img src="images/img4.jpeg" alt="mulher maquiada de caveira">
                 </div>
+
                     <div class="navigation-auto">
                       <div class="auto-btn1"></div>
                       <div class="auto-btn2"></div>
                       <div class="auto-btn3"></div>
                       <div class="auto-btn4"></div>
                     
-                    </div>
+                    </div>  
             </div>
             <div class="manual-navigation">
                 <label for="radio1" class="manual-btn"></label>
@@ -62,14 +84,14 @@
 
             
         </div>
-
+        
         <div class="link-redes">
             <a id="facebook" href="https://www.facebook.com/ifspcubatao/?locale=pt_BR"><img class="logo-redes" src="images/facebook.png" alt="logotipo do facebook"></a>
             <a id="instagram" href="https://www.instagram.com/ifspcubatao/"><img class="logo-redes" src="images/instagram.png" alt="logotipo do instagram"></a>
             <a id="github" href="https://github.com/DanielArthurFrei?tab=repositories"><img class="logo-redes" src="images/github.png" alt="logotipo do github"></a> 
         </div>
     </section>
-        <a class="link-texto" href="https://danielarthurfrei.github.io/Muertos2/" class="link">¡Te invitamos a vivir el Día de Los Muertos!</a> 
+        <a class="link-texto" href="historia.html" class="link">¡Haga clic aquí para saber más!</a> 
     </main>
 
     <script src="convite.js"></script>

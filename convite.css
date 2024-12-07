@@ -1,35 +1,84 @@
+:root{
+    --Laranja:#f18018;
+    --Amarelo:#fae53a;
+}
+
 body {
     margin: 0;
     padding: 0;
     background-image: url("images/FundoAzul.jpg");
     background-size: cover;
+    background-position: center;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    overflow-y: hidden;
 }
 
-.oswald{
-  font-family: "Oswald", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
 header {
     display: flex;
     justify-content: space-between;
-    height: 80px;
+    height: 70px;
     align-items: center;
+    background: linear-gradient(to bottom, black 30%, rgba(0, 0, 0, 0) 100%);
+    padding: 20px;
+}
+
+header .Titulo{
+    position: relative;
 }
 
 header h1{
-    display: absolute;
-    color: #f18018;
+    color: var(--Laranja);
     font-size: 40px;
+    margin: 0;
+}
+
+header h2{
+    color:var(--Amarelo);
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 22%;
+}
+
+.linkheader{
+    margin-right: 20px;
+    position: relative;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.linkheader::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(241, 128, 24, 1) 0%, rgba(255, 123, 0, 0.151) 100%);
+    opacity: 0;
+    transition: all 0.3s ease; 
+    z-index: -1; 
+}
+
+.linkheader:hover::after {
+    width: 100px; 
+    height: 100px;
+    opacity: 1;
 }
 
 main {
-    padding: 10px;
+    padding: 0px;
+    margin: 0;
 }
 main h2{
     display: flex;
-    color:#fae53a;
+    color:var(--Amarelo);
     padding: 30px;
     font-size: 30px;
 }
@@ -41,13 +90,16 @@ section {
     align-items: center;
 }
 
-.link-redes .logo-redes{
- width: 45px;
-   padding: 0;
-   margin: 0;
-   border-bottom: 0;
-   border-radius: 0;
+.link-redes{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    margin-right: 55px;
+}
 
+.link-redes .logo-redes{
+    width: 45px;
+    display: inline-block;
 }
 
 .link-redes .logo-redes:hover{
@@ -60,7 +112,19 @@ section {
 }
 
 .link-texto{
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-left: 65px;
+    text-decoration: none;
+    display: inline-block;
+    color: var(--Amarelo);
+    padding: 50px;
+    font-size: 30px;
+}
+
+.link-texto:hover{
+    color: var(--Laranja);
+    transition: 0.3s;
+    display: inline-block;
 }
 
 .slider{
@@ -101,7 +165,7 @@ section {
 }
 
 .manual-btn{
-    border: 2px solid #fae53a;
+    border: 2px solid var(--Amarelo);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -113,7 +177,7 @@ section {
 }
 
 .manual-btn:hover{
-    background-color: #fae53a;
+    background-color: var(--Amarelo);
 }
 
 #radio1:checked ~ .first{
@@ -133,7 +197,7 @@ section {
 }
 
 .navigation-auto div{
-    border: 2px solid #fae53a;
+    border: 2px solid var(--Amarelo);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -153,29 +217,165 @@ section {
 }
 
 #radio1:checked ~ .navigation-auto .auto-btn1{
-    background-color: #fae53a;
+    background-color: var(--Amarelo);
 }
 
 #radio2:checked ~ .navigation-auto .auto-btn2{
-    background-color: #fae53a;
+    background-color: var(--Amarelo);
 }
 
 #radio3:checked ~ .navigation-auto .auto-btn3{
-    background-color: #fae53a;
+    background-color: var(--Amarelo);
 }
 
 #radio4:checked ~ .navigation-auto .auto-btn4{
-    background-color: #fae53a;
+    background-color: var(--Amarelo);
 }
 
-main a{
-    color: #fae53a;
-    padding: 50px;
-    font-size: 30px;
+.textoqrcode{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.botao {
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: var(--Laranja);
+    margin-right: 10px;
+    color: var(--Amarelo);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.5s;
+    font-family: inherit;
+}
+
+.botao:hover {
+    background-color: #c0600b;
+}
+
+.botao:hover::after {
+    content: " Deseja visualizar o código QR?";
+    font-size: 20px;
+    color: #333;
+    margin-left: 10px;
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 1000; 
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--Laranja);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fechar:hover {
+    background-color: #d43f3f;
+}
+
+@media screen and (max-width: 640px) {
+    body{
+        overflow-y:auto;
+        overflow-x: hidden;
+    }
+    header {
+        height: 30px;
+    }
+    
+    header h1{
+        font-size: 20px;
+    }
+    
+    header h2{
+        left: 16%;
+        font-size: 15px;
+    }
+    
+    .linkheader{
+        margin-right: 0px;
+        margin-top: 10px;
+    }
+    
+    main h2{
+        color:var(--Amarelo);
+        padding: 15px;
+        font-size: 20px;
+        margin-left: 8%;
+    }
+    
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .link-redes{
+        display: flex;
+        margin-top: 100px;
+        flex-direction: row;
+        gap: 100px;
+        margin-right: 0px;
+    }
+    .link-redes .logo-redes{
+        width: 30px;
+    }
+    
+    .logotipo img{
+        width: 50px;
+    }
+    
+    .link-texto{
+        margin-top: -30px;
+        margin-left: -4%;
+        padding: 53px;
+        font-size: 28px;
+        display: block;
+    }
+
+    .slider{
+        width: 320px;
+    }
+     
+    .qrcode{
+        display: none;
+    }
+    
+    .manual-btn{
+        margin-left: -80px;
+    }
 
 
-
+    .navigation-auto{
+        margin-left: -40px;
+    }
+}
 
