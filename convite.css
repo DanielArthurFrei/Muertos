@@ -257,7 +257,7 @@ section {
 }
 
 .botao:hover::after {
-    content: " Deseja visualizar o código QR?";
+    content: " Haga clic aquí para ver el código QR";
     font-size: 20px;
     color: #333;
     margin-left: 10px;

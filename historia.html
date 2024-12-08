@@ -2,37 +2,143 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
     <title>Dia de Los Muertos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/img5.jpeg" type="img/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <a href="historia.html" class="logotipo"><img src="images/Logotipo.png" alt="Logotipo de Caveira decorada"></a> 
+        <div class="header-topo">
+            <div class="header-titulo">Día de los Muertos</div>
+            <nav class="header-nav">
+                <a href="#historia" class="button">Historia</a>
+                <a href="#celebracion" class="button">Celebración</a>
+                <a href="#ofrendas" class="button">Ofrendas</a>
+                <a href="#patrimonio" class="button">PCIH</a>
+                <a href="#mundo" class="button">Alrededor del mundo</a>
+                <a href="#curiosidades" class="button">Curiosidades</a>
+            </nav>
 
-        <h1><strong>¿Conoces el "Día de Los Muertos"?</strong></h1>
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
 
-        <a href="historia.html" class="logotipo"><img src="images/Logotipo.png" alt="Logotipo de Caveira decorada"></a> 
-        
+        <div class="menu-mobile">
+            <a href="#historia" class="button">Historia</a>
+            <a href="#celebracion" class="button">Celebración</a>
+            <a href="#ofrendas" class="button">Ofrendas</a>
+            <a href="#patrimonio" class="button">PCIH</a>
+            <a href="#mundo" class="button">Alrededor del mundo</a>
+            <a href="#curiosidades" class="button">Curiosidades</a>
+        </div>
+
+        <div class="container-carrossel">
+            <button class="seta esquerda" onclick="previousSlide()">&#9664;</button>
+            <div class="carrossel">
+
+                <div class="slide-carrossel">
+                    <div class="texto-carrossel I">                       
+                            <h1>DESCUBRE UNA DE LAS CULTURAS MEXICANAS MÁS FAMOSAS</h1>
+                            <p>El Día de Muertos es una tradición celebrada el 1 y 2 de noviembre en la que se honra la memoria de los muertos.</p>
+                    </div>
+                    <div class="imagem-carrossel">
+                        <img src="images/desfile-diadosmortos.jpg" alt="Homem devidamente fantasiado, participando de um desfile no Mexico do dia dos mortos">
+                    </div>
+                </div>
+
+                <div class="slide-carrossel">
+                    <div class="texto-carrossel II">
+                        <h1>CONOCE TUS PRINCIPALES PARTICULARIDADES</h1>
+                        <p>Las ofrendas son un elemento fundamental de esta celebración, en las que se colocan alimentos, bebidas, flores, velas y objetos significativos para los difuntos.</p>
+                    </div>
+                    <div class="imagem-carrossel">
+                        <img src="images/oferenda-diadosmortos.jpg" alt="Pessoas no cemiterio rezando com oferendas ao redor">
+                    </div>
+                </div>
+              
+                <div class="slide-carrossel">
+                    <div class="texto-carrossel III">
+                        <h1>ENTENDE CÓMO OCURRE TU CELEBRACIÓN</h1>
+                        <p>El Día de Los Muertos es una tradición profundamente enraizada en la cultura mexicana, donde se celebra la vida y se honra la memoria de los difuntos.</p>
+                    </div>
+                    <div class="imagem-carrossel">
+                        <img src="images/celebracao-diadosmortos.jpg" alt="Duas pessoas orando em um cemiterio florido e iluminado por velas.">
+                    </div>
+                </div>
+            </div>
+            <button class="seta direita" onclick="nextSlide()">&#9654;</button>
+        </div>
     </header>
 
     <main>
-        <div class="container">
-            <div class="texto1">
-                <h1>Origen del Día de Los Muertos</h1>
-                <p> La historia de la celebración del Día de Muertos en México es de origen indígena y existe desde la época de los aztecas y mayas. Inicialmente la celebración se realizaba durante todo el mes de agosto. Cuando llegaron los colonizadores españoles, quedaron impactados por los rituales paganos de los indios. Por ello, cambiaron la fecha conmemorativa a finales de octubre y principios de noviembre, con el fin de acercarla al Día de Todos los Santos y al Día de Todos los Difuntos, celebrados por el catolicismo el 1 y 2 de noviembre, respectivamente.</p>
-            </div>
 
-            <div class="imagem1">
-                <img src="images/img5.jpeg" alt="Esqueleto humano maquiado">
-            </div>
-
-            <div class="texto2">
-                <h3>La Catrina es uno de los mayores símbolos del Día de Muertos.</h3>
-                <p>Desde su creación por el artista José Guadalupe Posada, “La Catrina” se ha convertido en un símbolo del Día de Muertos en México. Maquillaje, disfraces, historias... Catrina se convirtió en un gran personaje en esta época del año, debido a su representación católica del esqueleto de una dama de la alta sociedad que se caracteriza por un sombrero, como insignia de la alta sociedad a principios de siglo. Siglo XX y tiene la función de memento mori, destinado a recordarnos que las diferencias sociales no significan nada ante la muerte. ¡Creo que es el disfraz favorito de las chicas para las rondas!</p>
-            </div>
-        </div>
-    </main>
+        <section id="historia">
+            
+            <div class="fundo-esquerda"></div>
     
+            
+            <div class="fundo-direita"></div>
+    
+           
+            <div class="container-historia">
+                
+                <img src="images/fotohistoria.jpg" alt="Mulher fantasiada de Caveira" class="imagem-historia">
+    
+                
+                <div class="historia-texto">
+                    <h2>HISTORIA</h2>
+                    <p>Los teotihuacanos realizaban ofrendas en honor a los muertos con rituales intensos para guiar a los fallecidos a uno de los cuatro paraísos, según su tipo de muerte. Utilizaban perros xoloitzcuintles para ayudarlos a cruzar el inframundo, sacrificándolos y enterrándolos con los difuntos.
+                        Para los antiguos mesoamericanos, la muerte no tenía connotaciones morales como en el cristianismo; el destino de las almas dependía del tipo de muerte, no del comportamiento en vida. Con la llegada de los españoles en el siglo XVI, se mezclaron las tradiciones católicas y mesoamericanas, creando el actual Día de Muertos.
+                       </p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="celebracion">
+                <div class="celebracao-texto">
+                    <h1>CELEBRACIÓN</h1>
+                    <p>En el Estado de México, la celebración del Día de Muertos comienza el 28 de octubre, cuando se recuerda a los fallecidos en accidentes con cruces y flores. El 31 de octubre, los cementerios se llenan de familias que decoran las tumbas de los niños, seguido el 1 de noviembre por la decoración de las tumbas de los adultos, acompañada de mariachis. En Toluca, hay un desfile con figuras monumentales de Catrinas, Adelitas y Quetzalcóatl. Las festividades duran hasta el 2 de noviembre, cuando se honra a los fallecidos adultos, tras una semana de actividades dedicadas a diferentes tipos de fallecimientos.</p>
+                </div>
+                <div class="celebracao-imagem">
+                    <img src="images/celebracao.jpg" alt="Mulher vestida de Catrina com um chapeu elaborado">
+                </div>
+        </section>
+        
+        <section id="ofrendas">
+
+            <div class="filho primeiro-filho">
+              <img src="images/oferendas1.jpg" alt="Doces em formato de caveira, tipico do dia dos mortos">
+            </div>
+          
+
+            <div class="filho segundo-filho">
+              <h1>OFRENDAS</h1>
+              <p>
+                Las calaveras de dulce llevan el nombre del difunto en la frente, y a veces de personas vivas, como broma. Son consumidas por familiares y amigos. Durante el 1 y 2 de noviembre, las familias limpian y decoran las tumbas con flores, especialmente cempasúchil y "flor de terciopelo", que se cree guían a las almas. El retrato del difunto se coloca en el altar, de espaldas, con un espejo para que el fallecido vea a sus seres queridos y ellos a él. La imagen de las Ánimas del Purgatorio ayuda a pedir por las almas en purgatorio, mientras que la cruz, introducida por los evangelizadores españoles, recuerda la fe cristiana y la conexión con la tierra, ubicándose en la parte superior del altar. Esses elementos fazem parte de una tradición sincrética que combina símbolos prehispánicos y cristianos en el Día de Muertos.
+              </p>
+              <a href="#curiosidades" class="button">Saiba mais</a>
+            </div>
+          
+
+            <div class="filho terceiro-filho">
+              <img src="images/altar.jpg" alt="altar tipico do dia dos mortos">
+            </div>
+          </section>
+          
+          <section id="curiosidades" style="height: 100vh; background: #f5f5f5;">
+            <h2>Seção de Destino</h2>
+          </section>
+
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
