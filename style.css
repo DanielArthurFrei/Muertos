@@ -82,7 +82,7 @@ header {
 .hamburger div {
     width: 30px;
     height: 3px;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
 }
 
 .menu-mobile {
@@ -146,6 +146,7 @@ header {
     text-align: center;
     max-width: 50%;
     margin-left: 6%;
+    text-align: justify;
 }
 
 .texto-carrossel.I{
@@ -288,6 +289,7 @@ section#historia:hover .imagem-historia, section#historia:hover .historia-texto{
 
 .historia-texto {
     max-width: 500px;
+    text-align: justify;
     z-index: 3; 
     color: var(--Roxo);
     padding: 0 20px;
@@ -328,6 +330,8 @@ section#celebracion {
     padding: 20px;
     margin-right: -7%;
     transition: 0.3s ease;
+    cursor: pointer;
+    text-align: justify;
 }
 
 .celebracao-texto:hover{
@@ -355,7 +359,7 @@ section#ofrendas {
     background-color: var(--Cinza);
   }
   
-  .filho {
+  .ofrendas-filho {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -363,37 +367,39 @@ section#ofrendas {
   }
   
 
-  .primeiro-filho {
+  .primeiro-filho-ofrendas {
     flex: 1 1 30%;
   }
   
-  .primeiro-filho img {
+  .primeiro-filho-ofrendas img {
     max-width: 300px;
     overflow: hidden;
     object-fit: cover;
     border-radius: 10px;
   }
   
-  .segundo-filho {
+  .segundo-filho-ofrendas {
     flex: 1 1 40%;
     text-align: center;
     flex-direction: column;
+    text-align: justify;
     padding: 20px;
     color: var(--Rosa);
+    text-shadow: rgba(247,102,179,0.9) 0px 0px 39px;
   }
   
-  .segundo-filho h1 {
+  .segundo-filho-ofrendas h1 {
     font-size: 40px;
     font-weight: 200;
     margin-bottom: 15px;
   }
   
-  .segundo-filho p {
+  .segundo-filho-ofrendas p {
     font-size: 20px;
     margin-bottom: 20px;
   }
   
-  .segundo-filho .button {
+  .segundo-filho-ofrendas .button {
     display: inline-block;
     text-decoration: none;
     background-color: var(--Roxo);
@@ -404,22 +410,159 @@ section#ofrendas {
     transition: background-color 0.3s ease;
   }
   
-  .segundo-filho .button:hover {
+  .segundo-filho-ofrendas .button:hover {
     background-color: var(--Rosa);
   }
   
-  .terceiro-filho {
+  .terceiro-filho-ofrendas {
     flex: 1 1 30%;
   }
   
-  .terceiro-filho img {
+  .terceiro-filho-ofrendas img {
     width: 100%;
     height: 800px;
     object-fit: cover;
   }
+
+section#patrimonio {
+    display: flex; 
+    width: 100%; 
+    height: 800px; 
+    padding: 80px; 
+    box-sizing: border-box; 
+    background-color: var(--Cinza); 
+    transition: transform 0.5s ease;
+  }
+
+  section#patrimonio:hover .patrimonio-imagem,
+section#patrimonio:hover .patrimonio-texto {
+  transform: scale(1.1); 
+}
+  
+  .patrimonio-imagem {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: flex-start; 
+    width: 30%; 
+    height: 40%; 
+    padding-left: 100px;
+    transition: transform 0.5s ease;
+  }
+  
+  .pat-imagem {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
+    border-radius: 8px; 
+  }
+  
+  .patrimonio-texto {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start; 
+    width: 65%; 
+    margin-top: 120px; 
+    background-color: var(--Azul);
+    color: white; 
+    padding: 20px; 
+    -webkit-box-shadow:0px 0px 105px 10px rgba(120,152,204,0.9);
+    -moz-box-shadow: 0px 0px 105px 10px rgba(120,152,204,0.9);
+    box-shadow: 0px 0px 105px 10px rgba(120,152,204,0.9);
+    border-radius: 8px; 
+    overflow: hidden; 
+    position: relative;
+    height: 270px;
+    transition: width 0.5s ease, height 0.5s ease, transform 0.5s ease;
+    cursor: pointer;
+    z-index: 999;
+  }
+  
+  .patrimonio-texto p {
+    margin: 0; 
+    font-size: 18px; 
+    line-height: 1.5; 
+    transition: transform 0.5s ease; 
+  }
+
+  .patrimonio-texto:hover {
+    height: 850px; 
+    width: 65%;
+  }
+
+#curiosidades {
+    width: 100%;
+    height: 630px; 
+    background-color: #006847; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start; 
+    padding: 5px;
+    box-sizing: border-box;
+    position: relative; 
+  }
+  
+  .curiosidades-titulo {
+    font-size: 44px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px; 
+    font-weight: 200;
+  }
+  
+  .curiosidades-imagens {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; 
+    gap: 25px;
+    flex-wrap: wrap; 
+    align-items: flex-start; 
+  }
+  
+  .curiosidades-imagem {
+    text-align: center; 
+    width: 18%; 
+  }
+  
+  .curiosidades-imagem img {
+    width: 100%; 
+    height: 300px; 
+  }
+  
+  .curiosidades-imagem p {
+    margin-top: 10px;
+    text-align: justify;
+    background-color:#0ca575;
+    font-size: 18px;
+    color: #fff; 
+    line-height: 1.4;
+    border-radius: 10px;
+    height: 120px;
+    overflow: hidden;
+    transition: height 0.5s ease, width 0.5s ease, transform 0.5s ease;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .curiosidades-imagem p:hover{
+    height: 550px;
+    width: 300px;
+  }
+
 @media screen and (max-width: 768px) {
     .header-nav {
         display: none;
+    }
+
+    .header-nav a {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .menu-mobile a {
+        font-size: 16px;
+        margin: 5px 0;
     }
 
     .hamburger {
@@ -430,14 +573,23 @@ section#ofrendas {
         flex-direction: column;
     }
 
+    .texto-carrossel {
+        max-width: 90%;
+        margin-left: 0;
+    }
+    .imagem-carrossel img {
+        max-width: 100%;
+        max-height: 200px;
+    }
+
     .imagem-carrossel img {
         max-width: 90%;
         max-height: 200px;
     }
 
     .seta {
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
         font-size: 14px;
     }
 
@@ -448,4 +600,360 @@ section#ofrendas {
     .seta.direita {
         right: 10px;
     }
+
+    section#historia{
+        height: 350px; 
+        margin-bottom: 60px;
+    }
+    
+    section#historia:hover .imagem-historia, section#historia:hover .historia-texto{
+        transform: scale(1.1);
+    }
+
+    .imagem-historia {
+        margin-left: 4%;
+        width: 24%; 
+        height: 50%;
+    }
+    
+    .historia-texto h2 {
+        font-size: 18px;
+        font-weight: 200;
+        margin: 0;
+    }
+    
+    .historia-texto p {
+        font-size: 10px;
+    }
+
+    section#celebracion {
+        flex-direction: column;
+        height: auto;
+        width: 70%;
+        margin-left: 50px;
+        justify-content: center;
+        height: 600px;
+    }
+    .celebracao-texto {
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+        justify-content: center;
+    }
+    .celebracao-imagem img {
+        max-width: 70%;
+        margin-left: 40px;
+        z-index: 10;
+    }
+    .celebracao-texto h1{
+        font-size: 20px;
+    }
+
+    .celebracao-texto p{
+       font-size: 10px; 
+    }
+    section#ofrendas {
+        flex-direction: column;
+        height: auto;
+        
+    }
+    .primeiro-filho-ofrendas, .terceiro-filho-ofrendas {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .segundo-filho-ofrendas {
+        width: 100%;
+        padding: 10px;
+    }
+
+      .primeiro-filho-ofrendas img {
+        max-width: 200px;
+      }
+      
+      .segundo-filho-ofrendas h1 {
+        font-size: 20px;
+        font-weight: 200;
+        margin-bottom: 15px;
+      }
+      
+      .segundo-filho-ofrendas p {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+      
+      .terceiro-filho-ofrendas img {
+        width: 50%;
+        height: 400px;
+      }
+
+    section#patrimonio {
+        flex-direction: column; 
+        height: auto;
+        padding: 15px; 
+    }
+    
+      .patrimonio-imagem {
+        width: 80%; 
+        height: auto; 
+        justify-content: center; 
+    }
+
+    .patrimonio-imagem img{
+        margin-right: 40px;
+        margin-bottom: -80px;
+    }
+    
+      .patrimonio-texto {
+        width: 10%; 
+        margin-top: -15px; 
+    }
+      .patrimonio-texto {
+        width: 95%; 
+        margin-left: 0px;
+        padding: 10px; 
+        overflow:hidden; 
+        margin-top: 70px;
+        height: 350px;
+        transition: none;
+      }
+
+      section#patrimonio:hover .patrimonio-imagem,
+section#patrimonio:hover .patrimonio-texto {
+  transform: scale(1.0); 
+}
+      
+      .patrimonio-texto p {
+        margin: 0; 
+        font-size: 10px; 
+        line-height: 1; 
+      }
+
+      .patrimonio-texto h2{
+        font-size: 10px;
+      }
+    
+      .patrimonio-texto:hover {
+        height: 350px; 
+        width: 95%;
+      }
+
+      .curiosidades-imagens {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .curiosidades-imagem {
+        width: 100%;
+    }
+      
+    #curiosidades {
+        height: 2000px; 
+        padding: 5px;
+      }
+      
+      .curiosidades-titulo {
+        font-size: 24px;
+        margin-bottom: 30px; 
+      }
+      
+      
+      .curiosidades-imagem img {
+        width: 75%; 
+        height: 200px; 
+      }
+      
+      .curiosidades-imagem p {
+        margin-top: 10px;
+        text-align: justify;
+        background-color:#0ca575;
+        font-size: 18px;
+        color: #fff; 
+        line-height: 1.4;
+        border-radius: 10px;
+        height: 120px;
+        overflow: hidden;
+        transition: height 0.5s ease, width 0.5s ease, transform 0.5s ease;
+        cursor: pointer;
+        padding: 10px;
+      }
+    
+      .curiosidades-imagem p:hover{
+        height: 550px;
+        width: 300px;
+      }
+    
+}
+
+    @media screen and (max-width: 1024px){
+        body{
+            overflow-x: hidden;
+        }
+        .header-titulo {
+            font-size: 24px;
+        }
+        
+        .imagem-historia {
+            margin-left: 4%;
+            width: 24%; 
+            height: 50%;
+        }
+        
+        .historia-texto h2 {
+            font-size: 18px;
+            font-weight: 200;
+            margin: 0;
+            margin-left: 70px;
+        }
+        
+        .historia-texto p {
+            font-size: 14px;
+            margin-left: 70px;
+        }
+
+        section#celebracion {
+            height: auto;
+            height: 600px;
+        }
+        .celebracao-texto {
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+            justify-content: center;
+            margin-left: 40px;
+        }
+        .celebracao-imagem img {
+            max-width: 90%;
+            margin-left: 40px;
+            z-index: 10;
+        }
+        .celebracao-texto h1{
+            font-size: 25px;
+        }
+    
+        .celebracao-texto p{
+           font-size: 12px; 
+        }
+
+        section#ofrendas {
+            height: auto;
+            
+        }
+        .primeiro-filho-ofrendas, .terceiro-filho-ofrendas {
+            width: 100%;
+            margin: 10px 0;
+        }
+        .segundo-filho-ofrendas {
+            width: 100%;
+            padding: 10px;
+        }
+    
+          .primeiro-filho-ofrendas img {
+            max-width: 200px;
+          }
+          
+          .segundo-filho-ofrendas h1 {
+            font-size: 20px;
+            font-weight: 200;
+            margin-bottom: 15px;
+          }
+          
+          .segundo-filho-ofrendas p {
+            font-size: 14px;
+            margin-bottom: 20px;
+          }
+          
+          .terceiro-filho-ofrendas img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+          }
+          section#patrimonio {
+            flex-direction: column; 
+            height: auto;
+            padding: 15px; 
+        }
+        
+          .patrimonio-imagem {
+            width: 50%; 
+            height: auto; 
+            justify-content: center; 
+        }
+    
+        .patrimonio-imagem img{
+            margin-right: -300px;
+            margin-bottom: -80px;
+        }
+        
+          .patrimonio-texto {
+            width: 90%; 
+            margin-left: 40px;
+            padding: 10px; 
+            margin-top: 70px;
+            height: 430px;
+            transition: none;
+          }
+    
+          section#patrimonio:hover .patrimonio-imagem,
+    section#patrimonio:hover .patrimonio-texto {
+      transform: scale(1.0); 
+    }
+          
+          .patrimonio-texto p {
+            margin: 0; 
+            font-size: 14px; 
+            line-height: 1; 
+          }
+    
+          .patrimonio-texto h2{
+            font-size: 18px;
+          }
+        
+          .patrimonio-texto:hover {
+            height: 430px; 
+            width: 90%;
+          }
+    
+          .curiosidades-imagens {
+            flex-direction: column;
+            gap: 10px;
+        }
+        .curiosidades-imagem {
+            width: 100%;
+        }
+
+        #curiosidades {
+            height: 2000px; 
+            padding: 5px;
+          }
+          
+          .curiosidades-titulo {
+            font-size: 34px;
+            margin-bottom: 30px; 
+          }
+          
+          
+          .curiosidades-imagem img {
+            width: 55%; 
+            height: 250px; 
+          }
+          
+          .curiosidades-imagem p {
+            margin-top: 10px;
+            text-align: justify;
+            background-color:#0ca575;
+            font-size: 18px;
+            color: #fff; 
+            line-height: 1.4;
+            border-radius: 10px;
+            height: 120px;
+            width: 90%;
+            overflow: hidden;
+            transition: height 0.5s ease, width 0.5s ease, transform 0.5s ease;
+            cursor: pointer;
+            padding: 10px;
+          }
+        
+          .curiosidades-imagem p:hover{
+            height: 300px;
+            width: 90%;
+          }
 }
