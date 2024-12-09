@@ -15,6 +15,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    background-color: var(--Cinza);
 }
 
 header {
@@ -276,7 +277,7 @@ section#historia:hover .imagem-historia, section#historia:hover .historia-texto{
 }
 
 .imagem-historia {
-    margin-left: 10%;
+
     width: 20%; 
     max-width: none; 
     height: 60%;
@@ -288,7 +289,7 @@ section#historia:hover .imagem-historia, section#historia:hover .historia-texto{
 }
 
 .historia-texto {
-    max-width: 500px;
+  margin-left: 110px;
     text-align: justify;
     z-index: 3; 
     color: var(--Roxo);
@@ -497,7 +498,6 @@ section#patrimonio:hover .patrimonio-texto {
     background-color: #006847; 
     display: flex;
     flex-direction: column;
-    align-items: center; 
     justify-content: flex-start; 
     padding: 5px;
     box-sizing: border-box;
@@ -515,15 +515,16 @@ section#patrimonio:hover .patrimonio-texto {
   .curiosidades-imagens {
     display: flex;
     justify-content: space-between;
-    width: 80%; 
-    gap: 25px;
+    width: 90%;
+    margin-left: 5%; 
+    gap: 20px;
     flex-wrap: wrap; 
     align-items: flex-start; 
   }
   
   .curiosidades-imagem {
     text-align: center; 
-    width: 18%; 
+    width: 160px; 
   }
   
   .curiosidades-imagem img {
@@ -541,247 +542,33 @@ section#patrimonio:hover .patrimonio-texto {
     border-radius: 10px;
     height: 120px;
     overflow: hidden;
-    transition: height 0.5s ease, width 0.5s ease, transform 0.5s ease;
+    transition: background-color 0.5s ease, height 0.5s ease, width 0.5s ease, transform 0.5s ease;
     cursor: pointer;
     padding: 10px;
   }
 
   .curiosidades-imagem p:hover{
-    height: 550px;
+    background-color: #245c4a;
+  }
+
+  .curiosidades-imagem.I p:hover{
+    height: 450px;
     width: 300px;
   }
 
-@media screen and (max-width: 768px) {
-    .header-nav {
-        display: none;
-    }
+  .curiosidades-imagem.II p:hover, .curiosidades-imagem.III p:hover{
+    height: 480px;
+    width: 200px;
+  }
 
-    .header-nav a {
-        font-size: 14px;
-        padding: 10px;
-    }
-    .menu-mobile a {
-        font-size: 16px;
-        margin: 5px 0;
-    }
+  .curiosidades-imagem.IV p:hover{
+    height: 380px;
+    width: 300px;
+  }
 
-    .hamburger {
-        display: flex;
-    }
-
-    .slide-carrossel {
-        flex-direction: column;
-    }
-
-    .texto-carrossel {
-        max-width: 90%;
-        margin-left: 0;
-    }
-    .imagem-carrossel img {
-        max-width: 100%;
-        max-height: 200px;
-    }
-
-    .imagem-carrossel img {
-        max-width: 90%;
-        max-height: 200px;
-    }
-
-    .seta {
-        width: 25px;
-        height: 25px;
-        font-size: 14px;
-    }
-
-    .seta.esquerda {
-        left: 10px;
-    }
-
-    .seta.direita {
-        right: 10px;
-    }
-
-    section#historia{
-        height: 350px; 
-        margin-bottom: 60px;
-    }
-    
-    section#historia:hover .imagem-historia, section#historia:hover .historia-texto{
-        transform: scale(1.1);
-    }
-
-    .imagem-historia {
-        margin-left: 4%;
-        width: 24%; 
-        height: 50%;
-    }
-    
-    .historia-texto h2 {
-        font-size: 18px;
-        font-weight: 200;
-        margin: 0;
-    }
-    
-    .historia-texto p {
-        font-size: 10px;
-    }
-
-    section#celebracion {
-        flex-direction: column;
-        height: auto;
-        width: 70%;
-        margin-left: 50px;
-        justify-content: center;
-        height: 600px;
-    }
-    .celebracao-texto {
-        margin: 0;
-        padding: 10px;
-        text-align: center;
-        justify-content: center;
-    }
-    .celebracao-imagem img {
-        max-width: 70%;
-        margin-left: 40px;
-        z-index: 10;
-    }
-    .celebracao-texto h1{
-        font-size: 20px;
-    }
-
-    .celebracao-texto p{
-       font-size: 10px; 
-    }
-    section#ofrendas {
-        flex-direction: column;
-        height: auto;
-        
-    }
-    .primeiro-filho-ofrendas, .terceiro-filho-ofrendas {
-        width: 100%;
-        margin: 10px 0;
-    }
-    .segundo-filho-ofrendas {
-        width: 100%;
-        padding: 10px;
-    }
-
-      .primeiro-filho-ofrendas img {
-        max-width: 200px;
-      }
-      
-      .segundo-filho-ofrendas h1 {
-        font-size: 20px;
-        font-weight: 200;
-        margin-bottom: 15px;
-      }
-      
-      .segundo-filho-ofrendas p {
-        font-size: 14px;
-        margin-bottom: 20px;
-      }
-      
-      .terceiro-filho-ofrendas img {
-        width: 50%;
-        height: 400px;
-      }
-
-    section#patrimonio {
-        flex-direction: column; 
-        height: auto;
-        padding: 15px; 
-    }
-    
-      .patrimonio-imagem {
-        width: 80%; 
-        height: auto; 
-        justify-content: center; 
-    }
-
-    .patrimonio-imagem img{
-        margin-right: 40px;
-        margin-bottom: -80px;
-    }
-    
-      .patrimonio-texto {
-        width: 10%; 
-        margin-top: -15px; 
-    }
-      .patrimonio-texto {
-        width: 95%; 
-        margin-left: 0px;
-        padding: 10px; 
-        overflow:hidden; 
-        margin-top: 70px;
-        height: 350px;
-        transition: none;
-      }
-
-      section#patrimonio:hover .patrimonio-imagem,
-section#patrimonio:hover .patrimonio-texto {
-  transform: scale(1.0); 
-}
-      
-      .patrimonio-texto p {
-        margin: 0; 
-        font-size: 10px; 
-        line-height: 1; 
-      }
-
-      .patrimonio-texto h2{
-        font-size: 10px;
-      }
-    
-      .patrimonio-texto:hover {
-        height: 350px; 
-        width: 95%;
-      }
-
-      .curiosidades-imagens {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .curiosidades-imagem {
-        width: 100%;
-    }
-      
-    #curiosidades {
-        height: 2000px; 
-        padding: 5px;
-      }
-      
-      .curiosidades-titulo {
-        font-size: 24px;
-        margin-bottom: 30px; 
-      }
-      
-      
-      .curiosidades-imagem img {
-        width: 75%; 
-        height: 200px; 
-      }
-      
-      .curiosidades-imagem p {
-        margin-top: 10px;
-        text-align: justify;
-        background-color:#0ca575;
-        font-size: 18px;
-        color: #fff; 
-        line-height: 1.4;
-        border-radius: 10px;
-        height: 120px;
-        overflow: hidden;
-        transition: height 0.5s ease, width 0.5s ease, transform 0.5s ease;
-        cursor: pointer;
-        padding: 10px;
-      }
-    
-      .curiosidades-imagem p:hover{
-        height: 550px;
-        width: 300px;
-      }
-    
-}
+  .curiosidades-imagem.V p:hover{
+    height: 400px;
+  }
 
     @media screen and (max-width: 1024px){
         body{
@@ -956,4 +743,272 @@ section#patrimonio:hover .patrimonio-texto {
             height: 300px;
             width: 90%;
           }
+}
+
+
+@media screen and (max-width: 576px) {
+  .header-nav {
+      display: none;
+  }
+
+  .header-nav a {
+      font-size: 14px;
+      padding: 10px;
+  }
+  .menu-mobile a {
+      font-size: 16px;
+      margin: 5px 0;
+  }
+
+  .hamburger {
+      display: flex;
+  }
+
+  .slide-carrossel {
+      flex-direction: column;
+  }
+
+  .texto-carrossel {
+      max-width: 90%;
+      margin-left: 0;
+  }
+  .imagem-carrossel img {
+      max-width: 100%;
+      max-height: 200px;
+  }
+
+  .imagem-carrossel img {
+      max-width: 90%;
+      max-height: 200px;
+  }
+
+  .seta {
+      width: 25px;
+      height: 25px;
+      font-size: 14px;
+  }
+
+  .seta.esquerda {
+      left: 10px;
+  }
+
+  .seta.direita {
+      right: 10px;
+  }
+
+  section#historia{
+      height: 450px; 
+      margin-bottom: 60px;
+      overflow: hidden;
+  }
+  
+  section#historia:hover .imagem-historia, section#historia:hover .historia-texto{
+      transform: scale(1.1);
+  }
+
+  .imagem-historia {
+      margin-left: 0%;
+      width: 34%; 
+      height: 50%;
+  }
+
+  .historia-texto{
+    width: 500px;
+    margin-left: 0px;
+  }
+  
+  .historia-texto h2 {
+      font-size: 17px;
+      font-weight: 200;
+      margin: 0;
+  }
+  
+  .historia-texto p {
+      font-size: 12px;
+      margin: 0px 0px 0px 0px;
+  }
+
+  section#celebracion {
+      flex-direction: column;
+      width: 100%;
+      height: 400px;
+      margin-bottom: 200px;
+      justify-content: center;
+  }
+  .celebracao-texto {
+    max-width: 80%;
+      margin: 0;
+      padding: 10px;
+      text-align: center;
+      margin-top: 60px;  
+  }
+
+  .celebracao-imagem{
+    margin-left: 17%;
+    font-size: 0;
+  }
+  .celebracao-imagem img {
+      max-width: 80%;
+      z-index: 10;
+      margin: 0;
+  }
+  .celebracao-texto h1{
+      font-size: 20px;
+  }
+
+  .celebracao-texto p{
+     font-size: 10px; 
+  }
+  section#ofrendas {
+      flex-direction: column;
+      background-color: #ffb2db;
+      
+  }
+  .primeiro-filho-ofrendas, .terceiro-filho-ofrendas {
+      width: 100%;
+      margin: 0 0;
+  }
+
+  .primeiro-filho-ofrendas{
+    margin-top: 15px;
+  }
+  .segundo-filho-ofrendas {
+      width: 100%;
+      padding: 10px;
+  }
+
+    .primeiro-filho-ofrendas img {
+      max-width: 200px;
+    }
+    
+    .segundo-filho-ofrendas h1 {
+      font-size: 20px;
+      font-weight: 200;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+    
+    .segundo-filho-ofrendas p {
+      font-size: 14px;
+      margin-bottom: 20px;
+      color: #fff;
+      line-height: 1.2;
+    }
+    
+    .terceiro-filho-ofrendas img {
+      width: 100%;
+      height: 400px;
+    }
+
+  section#patrimonio {
+      flex-direction: column; 
+      height: auto;
+      padding: 15px; 
+  }
+  
+    .patrimonio-imagem {
+      width: 80%; 
+      height: auto; 
+      justify-content: center; 
+  }
+
+  .patrimonio-imagem img{
+      margin-right: 40px;
+      margin-bottom: -80px;
+  }
+
+    .patrimonio-texto {
+      width: 100%; 
+      margin-left: 0px;
+      padding: 10px; 
+      overflow:hidden; 
+      margin-top: 70px;
+      height: 530px;
+      transition: none;
+    }
+
+    section#patrimonio:hover .patrimonio-imagem,
+section#patrimonio:hover .patrimonio-texto {
+transform: scale(1.0); 
+}
+    
+    .patrimonio-texto p {
+      margin: 0; 
+      font-size: 14px; 
+      line-height: 1; 
+    }
+
+    .patrimonio-texto h2{
+      font-size: 18px;
+    }
+  
+    .patrimonio-texto:hover {
+      height: 530px; 
+      width: 100%;
+    }
+
+    .curiosidades-imagens {
+      flex-direction: column;
+      gap: 10px;
+  }
+  .curiosidades-imagem {
+      width: 100%;
+  }
+    
+  #curiosidades {
+      height: 2300px; 
+      padding: 5px;
+    }
+    
+    .curiosidades-titulo {
+      font-size: 24px;
+      margin-bottom: 30px; 
+    }
+    
+    
+    .curiosidades-imagem img {
+      width: 75%; 
+      height: 200px; 
+    }
+    
+    .curiosidades-imagem p {
+      margin-top: 10px;
+      text-align: justify;
+      background-color:#0ca575;
+      font-size: 18px;
+      color: #fff; 
+      line-height: 1.4;
+      border-radius: 10px;
+      height: 120px;
+      overflow: hidden;
+      transition: height 0.5s ease, width 0.5s ease, transform 0.5s ease;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    .curiosidades-imagem{
+      width: 300px;
+    }
+
+    .curiosidades-imagem p:hover{
+      width: 340px;
+    }
+    .curiosidades-imagem.I p:hover{
+      height: 400px;
+      width: 340px;
+    }
+
+    .curiosidades-imagem.II p:hover, .curiosidades-imagem.III p:hover{
+      height: 320px;
+      width: 300px;
+    }
+
+    .curiosidades-imagem.IV p:hover{
+      height: 380px;
+    }
+
+    .curiosidades-imagem.V p:hover{
+      height: 220px;
+    }
+  
 }
